@@ -27,7 +27,7 @@ const dataFooter = [
 
 const Footer = () => {
     return (
-        <footer className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
+        <footer className="flex items-center justify-between p-6 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
             <div className="w-full max-w-screen-xl mx-auto md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between ">
                     <p className="font-bold">
@@ -36,7 +36,7 @@ const Footer = () => {
                     <ul className="flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400">
                         {dataFooter.map((data) => (
                             <li key={data.id}>
-                                <Link href={data.url} className="hover:uppercase rounded me-6 md:me-6">{data.name}</Link>
+                                <Link href={data.url} className="hover:underline me-6 md:me-6">{data.name}</Link>
                             </li>
                         ))}
                     </ul>
