@@ -51,7 +51,8 @@ const MenuList = () => {
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Categorias</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+
                             {components.map((component) => (
                                 <ListItem
                                     key={component.title}
@@ -93,6 +94,11 @@ const components: { title: string; href: string, description: string }[] = [
         title: "Formal",
         href: "/categoery/formal",
         description: "Zapatos formales para eventos importantes"
+    },
+    {
+        title: "Basquetbol",
+        href: "/category/basquetbol",
+        description: "Zapatos para jugar basquetbol"
     }
 ]
 

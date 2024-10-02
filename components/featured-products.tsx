@@ -43,7 +43,7 @@ const FeaturedProducts = () => {
                                                 </div>
                                             </CardContent>
                                             <div className="flex justify-between gap-4 px-8">
-                                                <h3 className="text-sm font-semibold">
+                                                <h3 className="text-sm font-semibold truncate">
                                                     {productName}
                                                 </h3>
                                                 <div className="flex items-center justify-between gap-3">
