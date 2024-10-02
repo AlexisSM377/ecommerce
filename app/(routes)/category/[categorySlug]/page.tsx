@@ -17,14 +17,16 @@ export default function Page() {
     const router = useRouter()
 
     const [filterGender, setFilterGender] = useState('')
+    const [filterColor, setFilterColor] = useState('')
+    console.log(filterColor, filterGender)
+
 
     const filteredProducts = result !== null && !loading && (
-        filterGender === ''
+        filterGender === '' || filterColor === ''
             ? result
             : result.filter((product: ProductType) =>
-                product.gender === filterGender)
+                product.gender === filterGender && product.color === filterColor)
     )
-
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
             {result !== null && !loading && (
@@ -32,7 +34,7 @@ export default function Page() {
             )}
             <Separator />
             <div className="sm:flex sm:justify-between">
-                <FiltersControlsCategory setFilterGender={setFilterGender} />
+                <FiltersControlsCategory setFilterGender={setFilterGender} setFilterColor={setFilterColor} />
                 <div className="grid gap-5 mt-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10">
                     {loading && (
                         <SkeletonShema grid={3} />
