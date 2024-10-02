@@ -9,7 +9,10 @@ export type ResultFilterType = {
         attributes: {
             gender: {
                 enum: any
-            }
+            },
+            color: {
+                enum: any
+            },
         }
     }
 }

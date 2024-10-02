@@ -11,7 +11,7 @@ export type ProductType = {
         data: {
             size: string
             enabled: boolean
-        }
+        }[]
     }
     stock: number
     gender: string
