@@ -45,8 +45,8 @@ const ProductCard = (props: ProductCardProps) => {
                     ))}
                 </CarouselContent>
             </Carousel>
-            <p className="text-lg text-center">{product.productName}</p>
-            <p className="font-bold text-center">{formatPrice(product.price)}</p>
+            <p className="text-sm font-semibold text-center">{product.productName}</p>
+            <p className="font-bold text-center dark:text-gray-500">{formatPrice(product.price)}</p>
 
         </Link>
     )

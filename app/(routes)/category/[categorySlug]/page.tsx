@@ -18,8 +18,6 @@ export default function Page() {
 
     const [filterGender, setFilterGender] = useState('')
     const [filterColor, setFilterColor] = useState('')
-    console.log(filterColor, filterGender)
-
 
     const filteredProducts = result !== null && !loading && (
         filterGender === '' || filterColor === ''
@@ -27,11 +25,23 @@ export default function Page() {
             : result.filter((product: ProductType) =>
                 product.gender === filterGender && product.color === filterColor)
     )
+    const handleResetFilters = () => {
+        setFilterGender('');
+        setFilterColor('');
+    };
+
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
-            {result !== null && !loading && (
-                <h1 className="text-3xl font-medium">{result[0].category.categoryName}</h1>
-            )}
+            <div className="flex items-center justify-between">
+                {result !== null && !loading && (
+                    <h1 className="text-3xl font-medium">{result[0].category.categoryName}</h1>
+                )}
+                <div onClick={handleResetFilters} className="bg-green-300 rounded-xl p-2 dark:text-black mb-3 font-semibold">
+                    <button>Borrar filtro</button>
+                </div>
+            </div>
+
+
             <Separator />
             <div className="sm:flex sm:justify-between">
                 <FiltersControlsCategory setFilterGender={setFilterGender} setFilterColor={setFilterColor} />

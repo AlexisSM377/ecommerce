@@ -10,10 +10,10 @@ const Navbar = () => {
     const router = useRouter();
 
     return (
-        <div className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
-            <h1 className="text-3xl" onClick={() => router.push("/")}>
-                Shoes
-                <span className="font-bold">ISA</span>
+        <div className="flex items-center justify-between mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl mt-6">
+            <h1 className="bg-gradient-to-br from-indigo-400 via-violet-600 to-cyan-400 bg-clip-text text-transparent text-3xl font-bold" onClick={() => router.push("/")}>
+                ISA
+                <span className="font-bold"> STORE</span>
             </h1>
             <div className="items-center justify-between hidden sm:flex">
                 <MenuList />
