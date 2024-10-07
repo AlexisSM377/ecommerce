@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from '../components/navbar';
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster"
+
 
 
 // If loading a variable font, you don't need to specify the font weight
@@ -35,6 +37,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Toaster />
           <Footer />
         </ThemeProvider>
 

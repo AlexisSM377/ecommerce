@@ -27,7 +27,7 @@ const dataFooter = [
 
 const Footer = () => {
     return (
-        <footer className="flex items-center justify-between mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
+        <footer className="flex items-center justify-between mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="w-full max-w-screen-xl mx-auto md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between ">
                     <p className="font-bold">
