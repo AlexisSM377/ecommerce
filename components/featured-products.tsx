@@ -11,11 +11,13 @@ import { Expand, ShoppingCart } from "lucide-react"
 
 import IconButton from "./icon-button"
 import { useRouter } from "next/navigation"
+import { useCart } from "@/hooks/use-card"
 
 
 const FeaturedProducts = () => {
     const { result, loading }: ResponseType = useGetFeaturedProducts()
     const router = useRouter()
+    const { addItem } = useCart()
 
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
@@ -38,7 +40,7 @@ const FeaturedProducts = () => {
                                                 <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                                                     <div className="flex justify-center gap-x-6">
                                                         <IconButton onclick={() => router.push(`product/${slug}`)} icon={<Expand size={20} />} className="text-gray-600" />
-                                                        <IconButton onclick={() => console.log("Agregar Item")} icon={<ShoppingCart size={20} />} className="text-gray-600" />
+                                                        <IconButton onclick={() => addItem(product)} icon={<ShoppingCart size={20} />} className="text-gray-600" />
                                                     </div>
                                                 </div>
                                             </CardContent>
