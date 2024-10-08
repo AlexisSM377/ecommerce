@@ -1,3 +1,4 @@
+import ProductBrandGender from "@/components/shared/product-brand-gerder"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { useCart } from "@/hooks/use-card"
@@ -19,15 +20,8 @@ const InfoProduct = (props: InfoProductProps) => {
     return (
         <div className="px-6">
             <div className="justify-between mb-3 sm:flex">
-                <h1 className="text-2xl block">{product.productName}</h1>
-                <div className="flex items-center justify-between gap-3">
-                    <p className="px-2 py-1 text-xs text-white bg-black rounded-full dark:bg-white dark:text-black w-fit">
-                        {product.brand.nameBrand}
-                    </p>
-                    <p className="px-2 py-1 text-xs bg-yellow-900 rounded-full w-fit text-white">
-                        {product.category.categoryName}
-                    </p>
-                </div>
+                <h1 className="text-2xl block mt-3">{product.productName}</h1>
+                <ProductBrandGender nameBrand={product.brand.nameBrand} gender={product.gender} />
             </div>
             <Separator className="my-4" />
             <p className="text-base block">{product.description}</p>

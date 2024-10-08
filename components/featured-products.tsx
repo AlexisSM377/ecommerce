@@ -12,6 +12,7 @@ import { Expand, ShoppingCart } from "lucide-react"
 import IconButton from "./icon-button"
 import { useRouter } from "next/navigation"
 import { useCart } from "@/hooks/use-card"
+import { formatPrice } from "@/lib/formatPrice"
 
 
 const FeaturedProducts = () => {
@@ -30,7 +31,7 @@ const FeaturedProducts = () => {
                     {result !== null && (
                         result.map((product: ProductType) => {
                             const { id } = product
-                            const { slug, images, productName, brand, price } = product
+                            const { slug, images, productName, brand, gender } = product
                             return (
                                 <CarouselItem key={id} className="md:basis-1/2 lg:basis-1/3 group" >
                                     <div className="p-1">
@@ -44,15 +45,15 @@ const FeaturedProducts = () => {
                                                     </div>
                                                 </div>
                                             </CardContent>
-                                            <div className="flex justify-between gap-4 px-8">
+                                            <div className="gap-4 px-8">
                                                 <h3 className="text-sm font-semibold truncate">
                                                     {productName}
                                                 </h3>
-                                                <div className="flex items-center justify-between gap-3">
+                                                <p className="font-bold dark:text-zinc-400">{formatPrice(product.price)}</p>
+                                                <div className="flex gap-2 mt-2">
                                                     <p className="text-xs font-semibold px-2 py-1 text-white bg-black rounded-full dark:bg-white dark:text-black w-fit">{brand.nameBrand}</p>
-                                                    <p className="text-xs font-semibold px-2 py-1 text-white bg-yellow-900 rounded-full w-fit">{price}</p>
+                                                    <p className="text-xs font-semibold px-2 py-1 text-white bg-yellow-900 rounded-full w-fit">{gender}</p>
                                                 </div>
-
                                             </div>
                                         </Card>
                                     </div>
