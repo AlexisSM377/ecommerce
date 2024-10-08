@@ -32,7 +32,7 @@ export const useLovedProducts = create(persist<UseLovedProductsProps>((set, get)
     removeLovedItem: (id: number) => {
         set({ lovedItems: [...get().lovedItems.filter((item) => item.id !== id)] })
         toast({
-            title: "Producto eliminado de favoritos 💔"
+            title: "Producto se ha eliminado de la lista 💔"
         })
 
     }
