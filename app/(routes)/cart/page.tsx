@@ -47,12 +47,12 @@ export default function Page() {
                     </ul>
                 </div>
                 <div className="max-w-xl">
-                    <div className="p-6 rounded-lg bg-slate-100 dark:bg-slate-800">
-                        <p className="mb-3 text-2xl font-semibold">Resumen</p>
+                    <div className="p-6 rounded-lg bg-slate-100 dark:bg-orange-100 dark:text-black">
+                        <p className="mb-3 text-3xl font-bold">Resumen</p>
                         <Separator />
                         <div className="flex justify-between gap-5 my-4">
-                            <p>Subtotal</p>
-                            <p>{formatPrice(totalPrice)}</p>
+                            <p className="font-bold">Subtotal</p>
+                            <p className="font-bold">{formatPrice(totalPrice)}</p>
                         </div>
                         <div className="flex items-center justify-center w-full mt-3">
                             <Button className="w-full" onClick={buyStripe}>
