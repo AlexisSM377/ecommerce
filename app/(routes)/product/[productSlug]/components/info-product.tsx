@@ -35,7 +35,7 @@ const InfoProduct = (props: InfoProductProps) => {
             <Separator className="my-4" />
             <p className="my-4 text-xl font-bold">{formatPrice(product.price)}</p>
             <div className="flex items-center gap-5">
-                <Button className="w-full" onClick={() => addItem(product)}>Comprar</Button>
+                <Button className="w-full" onClick={() => addItem(product)}>Agregar a la bolsa de compra</Button>
                 <Heart width={30} strokeWidth={1} className="transition duration-300 cursor-pointer hover:fill-black" onClick={() => addLoveItem(product)} />
 
             </div>
