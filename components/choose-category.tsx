@@ -12,11 +12,14 @@ const ChooseCategory = () => {
 
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
-            <h3 className="px-6 pb-4 text-3xl sm:pb-8">Elige tu categoría favorita</h3>
+            <div className="flex justify-between">
+                <h3 className="px-6 pb-4 text-3xl sm:pb-8">Elige tu categoría favorita</h3>
+                <Link href="/categories" className="text-lg">Ver todas las categorías</Link>
+            </div>
 
             <div className="grid gap-5 sm:grid-cols-3">
                 {!loading && result !== undefined && (
-                    result.map((category: CategoryType) => (
+                    result.slice(0, 3).map((category: CategoryType) => (
                         <Link
                             key={category.id}
                             href={`/category/${category.slug}`}
@@ -32,6 +35,7 @@ const ChooseCategory = () => {
                         </Link>
                     ))
                 )}
+
 
             </div>
         </div>
