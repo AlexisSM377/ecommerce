@@ -66,9 +66,9 @@ const MenuList = () => {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <Link href="/catalogo" legacyBehavior passHref>
+                    <Link href="/man" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            Catalogo
+                            Hombre
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
