@@ -2,7 +2,7 @@
 import { useGetCategoryProduct } from "@/api/getCategoryProduct";
 import { Separator } from "@/components/ui/separator";
 import { ResponseType } from "@/types/response";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import FiltersControlsCategory from "./components/filters-controls-category";
 import SkeletonShema from "@/components/skeletonSchema";
 import ProductCard from "./components/product-card";
@@ -14,7 +14,6 @@ export default function Page() {
     const params = useParams()
     const { categorySlug } = params
     const { result, loading }: ResponseType = useGetCategoryProduct(categorySlug);
-    const router = useRouter()
 
     const [filterGender, setFilterGender] = useState('')
     const [filterColor, setFilterColor] = useState('')
