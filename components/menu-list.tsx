@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import {
@@ -11,8 +10,9 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
+    navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
+import Link from "next/link"
 
 
 
@@ -49,6 +49,24 @@ const MenuList = () => {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
+                    <NavigationMenuTrigger>Marcas</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <ul className="grid w-[200px] gap-1 p-4 md:w-[500px] md:grid-cols-2 lg:w-[400px] text-center">
+
+                            {sneakers.map((sneaker) => (
+                                <ListItem
+                                    key={sneaker.title}
+                                    title={sneaker.title}
+                                    href={sneaker.href}
+                                >
+
+                                </ListItem>
+                            ))}
+                        </ul>
+                    </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                     <NavigationMenuTrigger>Categorias</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -65,19 +83,41 @@ const MenuList = () => {
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
+
                 <NavigationMenuItem>
                     <Link href="/man" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            Hombre
+                            Sneakers
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
+
+
             </NavigationMenuList>
         </NavigationMenu>
     )
 }
 
 export default MenuList
+
+const sneakers: { title: string; href: string }[] = [
+    {
+        title: "Converse",
+        href: "/brand/converse",
+    },
+    {
+        title: "Adidas",
+        href: "/brand/adidas",
+    },
+    {
+        title: "Nike",
+        href: "/brand/nike",
+    },
+    {
+        title: "Reebok",
+        href: "/brand/reebok",
+    }
+]
 
 const components: { title: string; href: string, description: string }[] = [
     {

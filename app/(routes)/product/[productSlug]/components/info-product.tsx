@@ -21,10 +21,10 @@ const InfoProduct = (props: InfoProductProps) => {
         <div className="px-6">
             <div className="justify-between mb-3 sm:flex">
                 <h1 className="text-2xl block mt-3">{product.productName}</h1>
-                <ProductBrandGender nameBrand={product.brand.nameBrand} gender={product.gender} />
             </div>
+            <ProductBrandGender nameBrand={product.brand.nameBrand} gender={product.gender} />
             <Separator className="my-4" />
-            <p className="text-base block">{product.description}</p>
+            <p className="text-base block text-justify">{product.description}</p>
             <div className="grid grid-cols-3 gap-2 my-4">
                 {product.size.data.map((size) => (
                     <div key={size.size} className={`border rounded-md text-center py-3 font-medium ${size.enabled ? "dark:hover:border-white cursor-pointer hover:border-black" : "cursor-not-allowed bg-black/[0.1] opacity-50"}`}>
