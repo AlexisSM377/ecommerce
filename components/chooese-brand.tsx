@@ -21,7 +21,7 @@ const ChooseBrand = () => {
                             <Link
                                 key={brand.id}
                                 href={`/brand/${brand.slug}`}
-                                className="flex justify-center items-center dark:bg-white bg-opacity-50 rounded-xl shadow-md  dark:shadow-md dark:shadow-white/50 p-4 hover:bg-slate-50 dark:hover:bg-slate-100"
+                                className="flex justify-center items-center dark:bg-orange-100 dark:bg-opacity-70 rounded-xl shadow-md  dark:shadow-md dark:shadow-white/50 p-4 hover:bg-slate-50 dark:hover:bg-slate-100"
                             >
                                 <img
                                     src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${brand.logoMain.url}`}
