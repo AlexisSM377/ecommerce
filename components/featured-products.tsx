@@ -22,9 +22,9 @@ const FeaturedProducts = () => {
 
     return (
         <div className="mx-auto sm:max-w-4xl md:max-w-6xl mt-6 px-4  lg:px-8 py-28 sm:py-28 sm:px-6">
-            <h3 className=" text-3xl sm:pb-8 font-bold">CLÁSICOS EN TENDENCIA</h3>
+            <h3 className="text-3xl sm:pb-6 font-bold">CLÁSICOS EN TENDENCIA</h3>
             <Carousel>
-                <CarouselContent className="-ml-2 md:-ml-4">
+                <CarouselContent className="">
                     {loading && (
                         <SkeletonShema grid={3} />
                     )}

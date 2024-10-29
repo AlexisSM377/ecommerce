@@ -1,11 +1,13 @@
 "use client"
-import { BaggageClaim, Heart, ShoppingCart, User } from "lucide-react";
+import { BaggageClaim, Heart, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
 import MenuList from "./menu-list";
 import ItemsMenuMobile from "./items-menu-mobile";
 import ToggleTheme from "./toggle-theme";
 import { useCart } from "@/hooks/use-card";
 import { useLovedProducts } from "@/hooks/use-loved-products";
+import LogoutButton from "./LogoutButton";
+
 
 const Navbar = () => {
 
@@ -43,7 +45,9 @@ const Navbar = () => {
                     strokeWidth="1"
                     className={`cursor-pointer ${lovedItems.length > 0 && ' fill-black dark:fill-white'}`}
                     onClick={() => router.push("/loved-products")} />
-                <User strokeWidth="1" className="cursor-pointer" />
+
+
+                <LogoutButton />
 
                 <ToggleTheme />
             </div>
