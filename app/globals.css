@@ -72,3 +72,47 @@
   }
 }
 
+.company-link {
+  background: linear-gradient(to bottom, rgb(252, 252, 252) 0%, transparent 100%);
+  transition: all 0.5s ease;
+  border-radius: 1rem;
+}
+
+.company-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, transparent);
+  opacity: 0;
+  height: 50%;
+  transition:
+    opacity 0.2s ease-in-out,
+    height 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion) {
+  .company-link::before {
+    transition: none;
+  }
+}
+
+.company-link:hover::before,
+.company-link:focus::before {
+  opacity: 0.8;
+  height: 90%;
+  box-shadow: 0 -4px 3px rgba(165, 40, 40, 0.75);
+}
+
+.company-link:hover .company-logo,
+.company-link:focus .company-logo {
+  transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion) {
+  .company-link:hover .company-logo,
+  .company-link:focus .company-logo {
+    transform: scale(1);
+  }
+}
+
