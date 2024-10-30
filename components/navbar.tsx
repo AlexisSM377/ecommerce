@@ -19,11 +19,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl mt-6 px-4 sm:px-6 lg:px-8">
             <div className="flex sm:hidden justify-center items-center gap-2">
                 <ItemsMenuMobile />
-                <h1 className="bg-gradient-to-br from-indigo-400 via-violet-600 to-cyan-400 bg-clip-text text-transparent text-2xl font-bold" onClick={() => router.push("/")}>
-                    ISA
-                    <span className="font-bold"> STORE</span>
-                </h1>
+
             </div>
+            <h1 className="bg-gradient-to-br from-indigo-400 via-violet-600 to-cyan-400 bg-clip-text text-transparent text-2xl font-bold" onClick={() => router.push("/")}>
+                ISA
+                <span className="font-bold"> STORE</span>
+            </h1>
             <div className="items-center justify-between hidden sm:flex">
                 <MenuList />
             </div>
