@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <div className="flex items-center justify-between mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl mt-6 px-4 sm:px-6 lg:px-8">
-            <div className="flex sm:hidden justify-center items-center gap-2">
+            <div className="flex sm:hidden justify-center items-center">
                 <ItemsMenuMobile />
 
             </div>
