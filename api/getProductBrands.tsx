@@ -14,8 +14,8 @@ export function useGetProductBrands() {
                 const json = await res.json()
                 setResult(json.data)
                 setLoading(false)
-            } catch (error: any) {
-                setError(error)
+            } catch (error) {
+                setError(error as string)
                 setLoading(false)
             }
         })()
