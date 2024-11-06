@@ -1,23 +1,92 @@
-import { Menu } from "lucide-react";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { ChartBarStacked, Footprints, House, Menu, UsersRound } from "lucide-react";
 import Link from "next/link";
+import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 
 const ItemsMenuMobile = () => {
     return (
         <div>
-            <Popover>
-                <PopoverTrigger>
+            <Sheet>
+                <SheetTrigger asChild>
                     <Menu />
-                </PopoverTrigger>
-                <PopoverContent>
-                    <Link href="/categories/casual" className="block">Casual</Link>
-                    <Link href="/categories/deportivo" className="block">Deportivo</Link>
-                    <Link href="/categories/formal" className="block">Formal</Link>
-                    <Link href="/categories/basquetbol" className="block">basquetbol</Link>
-                </PopoverContent>
-            </Popover>
+                </SheetTrigger>
+                <SheetContent>
+                    <div className="space-y-4">
+
+                        <SheetTitle>
+                            <SheetClose asChild>
+
+                                <Link href="/" className="flex items-center gap-2">
+                                    <House />
+                                    Home
+                                </Link>
+                            </SheetClose>
+                        </SheetTitle>
+                        <SheetTitle>
+                            <SheetClose asChild>
+
+                                <Link href="/isa" className="flex items-center gap-2">
+                                    <UsersRound />
+                                    Sobre nosotros
+                                </Link>
+                            </SheetClose>
+                        </SheetTitle>
+                    </div>
+
+                    <SheetTitle className="pt-4 flex items-center gap-2">
+                        <Footprints />
+                        Marcas
+                    </SheetTitle>
+                    <div className="px-8 py-2 space-y-2">
+                        {
+                            sneakers.map((sneaker) => (
+                                <SheetClose asChild key={sneaker.title}>
+
+                                    <Link href={sneaker.href} className="block">{sneaker.title}</Link>
+                                </SheetClose>
+                            ))
+                        }
+                    </div>
+                    <SheetTitle className="flex items-center gap-2 ">
+                        <ChartBarStacked />
+                        Categorias
+                    </SheetTitle>
+                    <div className="px-8 space-y-2 py-2">
+                        <SheetClose asChild>
+                            <Link href="/category/casual" className="block">Casual</Link>
+                        </SheetClose>
+                        <SheetClose asChild>
+                            <Link href="/category/deportivo" className="block">Deportivo</Link>
+                        </SheetClose>
+                        <SheetClose asChild>
+                            <Link href="/category/formal" className="block">Formal</Link>
+                        </SheetClose>
+                        <SheetClose asChild>
+                            <Link href="/category/basquetbol" className="block">Basquetbol</Link>
+                        </SheetClose>
+                    </div>
+                </SheetContent>
+            </Sheet>
         </div>
     )
 }
 
 export default ItemsMenuMobile;
+
+const sneakers: { title: string; href: string }[] = [
+    {
+        title: "Converse",
+        href: "/brand/converse",
+    },
+    {
+        title: "Adidas",
+        href: "/brand/adidas",
+    },
+    {
+        title: "Nike",
+        href: "/brand/nike",
+    },
+    {
+        title: "Reebok",
+        href: "/brand/reebok",
+    }
+]
