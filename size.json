@@ -1,0 +1,52 @@
+{
+    "data": [
+      {
+        "size": "23",
+        "enabled": true
+      },
+      {
+        "size": "23.5",
+        "enabled": true
+      },
+      {
+        "size": "24",
+        "enabled": true
+      },
+      {
+        "size": "24.5",
+        "enabled": true
+      },
+      {
+        "size": "25",
+        "enabled": true
+      },
+      {
+        "size": "25.5",
+        "enabled": true
+      },
+      {
+        "size": "26",
+        "enabled": true
+      },
+      {
+        "size": "26.5",
+        "enabled": true
+      },
+      {
+        "size": "27",
+        "enabled": true
+      },
+      {
+        "size": "27.5",
+        "enabled": true
+      },
+      {
+        "size": "28",
+        "enabled": false
+      },
+      {
+        "size": "28.5",
+        "enabled": false
+      }
+    ]
+  }
