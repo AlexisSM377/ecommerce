@@ -14,7 +14,7 @@ export function useGetCategories() {
                 const json = await res.json()
                 setResult(json.data)
                 setLoading(false)
-            } catch (error: ResponseType) {
+            } catch (error: any) {
                 setError(error)
                 setLoading(false)
             }
