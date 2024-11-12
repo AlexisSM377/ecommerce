@@ -24,7 +24,7 @@ const ChooseBrand = () => {
                                 className="flex justify-center items-center dark:bg-white rounded-xl shadow-md  dark:shadow-md p-4 hover:bg-slate-50"
                             >
                                 <img
-                                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${brand.logoMain.url}`}
+                                    src={`${brand.logoMain.url}`}
                                     alt={brand.nameBrand}
                                     className="w-auto h-28 transition duration-300 ease-in-out rounded-lg hover:scale-110"
                                 />
