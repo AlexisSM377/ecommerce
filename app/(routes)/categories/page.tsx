@@ -42,7 +42,7 @@ const Page = () => {
                             className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded-lg"
                         >
                             <img
-                                src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${category.mainImage.url}`}
+                                src={`${category.mainImage.url}`}
                                 alt={category.categoryName}
                                 className="max-w-[270px] transition duration-300 ease-in-out rounded-lg hover:scale-110"
                             />
