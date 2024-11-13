@@ -21,9 +21,8 @@ const Navbar = () => {
                 <ItemsMenuMobile />
 
             </div>
-            <h1 className="bg-gradient-to-br from-indigo-400 via-violet-600 to-cyan-400 bg-clip-text text-transparent text-2xl font-bold" onClick={() => router.push("/")}>
+            <h1 className="bg-gradient-to-br from-indigo-400 via-violet-600 to-cyan-400 bg-clip-text text-transparent text-2xl sm:text-2xl lg:text-2xl font-bold" onClick={() => router.push("/")}>
                 ISA
-                <span className="font-bold"> STORE</span>
             </h1>
             <div className="items-center justify-between hidden sm:flex">
                 <MenuList />

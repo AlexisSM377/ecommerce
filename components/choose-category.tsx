@@ -12,8 +12,8 @@ const ChooseCategory = () => {
 
     return (
         <div className="max-w-6xl py-24 mx-auto sm:py-24 sm:px-24">
-            <div className="flex justify-between">
-                <h3 className="px-6 pb-4 text-xl sm:pb-8 sm:text-3xl">Elige tu categoría favorita</h3>
+            <div className="flex justify-between p-4">
+                <h3 className="text-xl sm:text-2xl">Elige tu categoría favorita</h3>
                 <Link href="/categories" className="text-lg">Ver todas</Link>
             </div>
 

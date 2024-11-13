@@ -4,7 +4,7 @@ import { buttonVariants } from "./ui/button"
 const BannerProduct = () => {
     return (
         <>
-            <div className="mt-16 text-center">
+            <div className="mt-16 text-center p-2">
                 <p className="opacity-80 text-lg text-gray-900 dark:text-gray-400 font-medium">Sumérgete a una experiencia de compra única</p>
                 <h4 className="mt-2 text-3xl font-extrabold uppercase block">¡Descubre los productos más vendidos!</h4>
                 <p className="my-2 text-lg ">¡No te quedes sin el tuyo!</p>
