@@ -27,7 +27,7 @@ const InfoIsa = () => {
                 <div>
                     {result.map((item: DetailsType) => (
                         <div key={item.id}>
-                            <img src={`${item.logo.url}`} alt={item.title} className="w-full h-80 object-cover" />
+                            <img src={`${item.logo.url}`} alt={item.title} className="w-full h-full object-cover" />
                             <h1 className="bg-gradient-to-br from-indigo-400 via-violet-600 to-cyan-400 bg-clip-text text-transparent text-7xl font-bold text-center pt-24">{item.title}</h1>
                             <p className="mt-12 text-xl text-justify">{item.description}</p>
                             <Accordion type="single" collapsible className="sm:max-w-2xl md:max-2xl mx-auto pt-48 px-4 sm:px-6 lg:px-8">
