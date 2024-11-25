@@ -34,12 +34,12 @@ const LogoutButton = () => {
                 </div>
             ) : (
 
-                <Button onClick={() => signIn(
-                    'google',
-                    {
-                        callbackUrl: "/profile"
-                    }
-                )}>
+                <Button onClick={async () => {
+                    await signIn('google', {
+                        callbackUrl: "/profile",
+                        redirect: false
+                    })
+                }}>
                     Iniciar sesión
                 </Button>
             )}
