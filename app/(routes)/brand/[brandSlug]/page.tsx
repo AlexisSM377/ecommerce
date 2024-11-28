@@ -23,16 +23,17 @@ export default function Page() {
 
 
     const filteredProducts = result !== null && !loading && (
-        filterGender === '' || filterColor === '' || filterPrice === 0
-            ? result
-            : result.filter((product: ProductType) =>
-                product.gender === filterGender && product.color === filterColor && product.price <= filterPrice)
-    )
+        result.filter((product: ProductType) => {
+            const genderMatch = filterGender === '' || product.gender === filterGender;
+            const colorMatch = filterColor === '' || product.color === filterColor;
+            const priceMatch = filterPrice === 0 || product.price <= filterPrice;
+            return genderMatch && colorMatch && priceMatch;
+        })
+    );
     const clearFilters = () => {
         setFilterGender('');
         setFilterColor('');
         setFilterPrice(0);
-
     }
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">

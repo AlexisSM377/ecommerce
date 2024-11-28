@@ -55,10 +55,10 @@ const ItemsMenuMobile = () => {
                             <Link href="/category/casual" className="block">Casual</Link>
                         </SheetClose>
                         <SheetClose asChild>
-                            <Link href="/category/deportivo" className="block">Deportivo</Link>
+                            <Link href="/category/Entrenamiento y gym" className="block">Entrenamiento y gym</Link>
                         </SheetClose>
                         <SheetClose asChild>
-                            <Link href="/category/formal" className="block">Formal</Link>
+                            <Link href="/category/running" className="block">Formal</Link>
                         </SheetClose>
                         <SheetClose asChild>
                             <Link href="/category/basquetbol" className="block">Basquetbol</Link>

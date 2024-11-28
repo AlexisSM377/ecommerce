@@ -17,7 +17,7 @@ const FilterColor = (props: FilterColorProps) => {
             )}
             <Select onValueChange={(value) => setFilterColor(value)}>
                 <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Colores" />
+                    <SelectValue placeholder="Selecciona un color" />
                 </SelectTrigger>
                 <SelectContent >
                     {result !== null && result.schema.attributes.color.enum.map((color: string) => (

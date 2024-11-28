@@ -21,6 +21,7 @@ const BrandCard = (props: BrandCardProps) => {
             <div className="absolute flex items-center justify-between gap-3 px-2 z-[1] top-4">
                 <p className="px-2 py-1 text-xs text-white bg-black rounded-full dark:bg-white dark:text-black w-fit font-medium">{product.category.categoryName}</p>
                 <p className="px-2 py-1 text-xs text-white bg-yellow-900 rounded-full w-fit font-medium">{product.gender}</p>
+                <p className="px-2 py-1 text-xs text-white bg-slate-900 rounded-full w-fit font-medium">{product.color}</p>
             </div>
 
             <Carousel opts={{ align: "start" }} className="w-full">

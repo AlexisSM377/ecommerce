@@ -19,10 +19,11 @@ export default function Page() {
     const [filterColor, setFilterColor] = useState('')
 
     const filteredProducts = result !== null && !loading && (
-        filterGender === '' || filterColor === ''
-            ? result
-            : result.filter((product: ProductType) =>
-                product.gender === filterGender && product.color === filterColor)
+        result.filter((product: ProductType) => {
+            const genderMatch = filterGender === '' || product.gender === filterGender;
+            const colorMatch = filterColor === '' || product.color === filterColor;
+            return genderMatch && colorMatch;
+        })
     )
     const handleResetFilters = () => {
         setFilterGender('');

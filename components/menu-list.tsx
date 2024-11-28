@@ -48,6 +48,15 @@ const MenuList = () => {
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                    <Link href="/sneakers" legacyBehavior passHref>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            Sneakers
+                        </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
+
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Marcas</NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -83,16 +92,6 @@ const MenuList = () => {
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                    <Link href="/man" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            Sneakers
-                        </NavigationMenuLink>
-                    </Link>
-                </NavigationMenuItem>
-
-
             </NavigationMenuList>
         </NavigationMenu>
     )
@@ -102,20 +101,12 @@ export default MenuList
 
 const sneakers: { title: string; href: string }[] = [
     {
-        title: "Converse",
-        href: "/brand/converse",
-    },
-    {
         title: "Adidas",
         href: "/brand/adidas",
     },
     {
         title: "Nike",
         href: "/brand/nike",
-    },
-    {
-        title: "Reebok",
-        href: "/brand/reebok",
     }
 ]
 
@@ -126,14 +117,14 @@ const components: { title: string; href: string, description: string }[] = [
         description: "Zapatos casuales para el dia a dia"
     },
     {
-        title: "Deportivo",
-        href: "/category/deportivo",
+        title: "Entrenamiento y gym",
+        href: "/category/entrenamiento",
         description: "Zapatos deportivos para hacer ejercicio"
     },
     {
-        title: "Formal",
-        href: "/categoery/formal",
-        description: "Zapatos formales para eventos importantes"
+        title: "Running",
+        href: "/category/runnig",
+        description: "Zapatos para correr"
     },
     {
         title: "Basquetbol",
