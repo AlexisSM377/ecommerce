@@ -40,8 +40,8 @@ const FeaturedProducts = () => {
                                                 <img src={`${images[0].url}`} alt="Image featured" className="rounded-sm w-auto h-72" />
                                                 <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                                                     <div className="flex justify-center gap-x-6">
-                                                        <IconButton onclick={() => router.push(`product/${slug}`)} icon={<Expand size={20} />} className="text-gray-600" />
-                                                        <IconButton onclick={() => addItem(product)} icon={<ShoppingCart size={20} />} className="text-gray-600" />
+                                                        <IconButton onclick={() => router.push(`product/${slug}`)} icon={<Expand size={20} />} className="text-gray-900" />
+                                                        <IconButton onclick={() => addItem(product)} icon={<ShoppingCart size={20} />} className="text-gray-900" />
                                                     </div>
                                                 </div>
                                             </CardContent>

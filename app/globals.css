@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -61,8 +59,6 @@
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
@@ -73,7 +69,11 @@
 }
 
 .company-link {
-  background: linear-gradient(to bottom, rgb(252, 252, 252) 0%, transparent 100%);
+  background: linear-gradient(
+    to bottom,
+    rgb(252, 252, 252) 0%,
+    transparent 100%
+  );
   transition: all 0.5s ease;
   border-radius: 1rem;
 }
@@ -83,12 +83,14 @@
   position: absolute;
   inset: 0;
   display: block;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, transparent);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent
+  );
   opacity: 0;
   height: 50%;
-  transition:
-    opacity 0.2s ease-in-out,
-    height 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion) {
@@ -157,5 +159,41 @@
   }
 }
 
+html {
+  scrollbar-gutter: stable;
+}
 
+@supports selector(::-webkit-scrollbar) {
+  @media (hover: hover) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 10px;
+    }
 
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #999;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background-color: #666;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--background-image);
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: var(--background-image);
+    }
+  }
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: transparent;
+    scrollbar-width: thin;
+  }
+}

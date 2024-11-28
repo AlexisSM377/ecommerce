@@ -16,18 +16,18 @@ const CarouselProduct = (props: CarouselProductProps) => {
             <CarouselContent>
                 {product.images.map((image) => (
 
-                    <CarouselItem key={image.id}>
+                    <CarouselItem key={image.id} className="group">
                         <img src={`${image.url}`} alt="Product Image" className="rounded-lg w-auto" />
                         <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                             <div className="flex justify-center gap-x-6">
                                 <IconButton onclick={() => router.push(`/product/${product.slug})`)}
                                     icon={
-                                        <Expand size={20} className="text-gray-600" />
+                                        <Expand size={20} className="text-gray-900" />
                                     }
                                 />
                                 <IconButton onclick={() => console.log("Agregar Item")}
                                     icon={
-                                        <ShoppingCart size={20} className="text-gray-600" />
+                                        <ShoppingCart size={20} className="text-gray-900" />
                                     }
                                 />
                             </div>
