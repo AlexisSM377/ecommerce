@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster"
 import NextTopLoader from 'nextjs-toploader';
-import { Providers } from "./Providers";
+import { SessionProvider } from "next-auth/react";
 
 
 
@@ -53,10 +53,10 @@ export default function RootLayout({
             zIndex={1600}
             showAtBottom={false}
           />
-          <Providers>
+          <SessionProvider>
             <Navbar />
             {children}
-          </Providers>
+          </SessionProvider>
           <Toaster />
           <Footer />
 
