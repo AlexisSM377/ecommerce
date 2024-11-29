@@ -53,8 +53,8 @@ export default function RootLayout({
             zIndex={1600}
             showAtBottom={false}
           />
+          <Navbar />
           <SessionProvider>
-            <Navbar />
             {children}
           </SessionProvider>
           <Toaster />
