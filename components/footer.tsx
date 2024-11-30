@@ -10,7 +10,7 @@ const dataFooter = [
     {
         id: 2,
         name: "Productos",
-        url: "#"
+        url: "/sneakers"
     },
     {
         id: 3,
