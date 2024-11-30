@@ -16,6 +16,7 @@ export default function LoginPage() {
                             'use server'
                             await signIn('github', {
                                 redirectTo: '/profile',
+                                redirect: true,
                             })
                         }}
                         className="w-full"
