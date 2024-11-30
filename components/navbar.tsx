@@ -6,8 +6,8 @@ import ItemsMenuMobile from "./items-menu-mobile";
 import ToggleTheme from "./toggle-theme";
 import { useCart } from "@/hooks/use-card";
 import { useLovedProducts } from "@/hooks/use-loved-products";
-import { Button } from "./ui/button";
-import { signIn } from "next-auth/react";
+import LogoutButton from "./LogoutButton";
+
 
 
 const Navbar = () => {
@@ -48,17 +48,10 @@ const Navbar = () => {
                     className={`cursor-pointer ${lovedItems.length > 0 && ' fill-black dark:fill-white'}`}
                     onClick={() => router.push("/loved-products")} />
 
-                <Button onClick={async () => {
-                    await signIn('google', {
-                        callbackUrl: "/profile",
-                        redirect: false
-                    })
-                }}>
-                    Iniciar sesión
-                </Button>
 
 
-                {/* <LogoutButton /> */}
+
+                <LogoutButton />
 
                 <ToggleTheme />
             </div>

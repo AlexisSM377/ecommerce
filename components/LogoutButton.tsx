@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import { Button } from './ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './ui/dropdown-menu'
 import { useRouter } from 'next/navigation'
+import { User } from 'lucide-react'
 
 const LogoutButton = () => {
     const router = useRouter()
@@ -34,14 +35,11 @@ const LogoutButton = () => {
                 </div>
             ) : (
 
-                <Button onClick={async () => {
-                    await signIn('google', {
-                        callbackUrl: "/profile",
-                        redirect: false
-                    })
-                }}>
-                    Iniciar sesión
-                </Button>
+                <User
+                    strokeWidth="1"
+                    className="cursor-pointer"
+                    onClick={() => router.push("/login")}
+                />
             )}
         </div>
     )

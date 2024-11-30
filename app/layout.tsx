@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Poppins } from 'next/font/google'
 import "./globals.css";
-import Navbar from '../../components/navbar';
+
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster"
 import NextTopLoader from 'nextjs-toploader';
-import { SessionProvider } from "next-auth/react";
 
-
-
+import Navbar from "@/components/navbar";
+import { Providers } from "./Providers";
 
 // If loading a variable font, you don't need to specify the font weight
 const poppins = Poppins({
@@ -53,10 +52,10 @@ export default function RootLayout({
             zIndex={1600}
             showAtBottom={false}
           />
-          <Navbar />
-          <SessionProvider>
+          <Providers>
+            <Navbar />
             {children}
-          </SessionProvider>
+          </Providers>
           <Toaster />
           <Footer />
 
