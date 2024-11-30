@@ -30,6 +30,16 @@ const ItemsMenuMobile = () => {
                                 </Link>
                             </SheetClose>
                         </SheetTitle>
+                        <SheetTitle>
+                            <SheetClose asChild>
+
+                                <Link href="/sneakers" className="flex items-center gap-2">
+                                    <Footprints />
+                                    Sneakers
+                                </Link>
+                            </SheetClose>
+                        </SheetTitle>
+
                     </div>
 
                     <SheetTitle className="pt-4 flex items-center gap-2">
