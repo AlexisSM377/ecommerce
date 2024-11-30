@@ -1,30 +1,21 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { signIn } from "@/lib/auth";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { OAuthButtons } from "./components/oauth-signin";
 
-export default function LoginPage() {
+
+
+export default async function LoginPage() {
+
     return (
-        <div className="min-h-screen flex justify-center items-start md:items-center p-8">
-            <Card className="w-full max-w-sm">
+        <section className="h-[calc(80vh-57px)] flex justify-center items-center">
+            <Card className="mx-auto max-w-lg">
                 <CardHeader>
                     <CardTitle className="text-2xl font-bold">Login</CardTitle>
                     <CardDescription>Login this demo uses github</CardDescription>
                 </CardHeader>
-                <CardFooter>
-                    <form
-                        action={async () => {
-                            'use server'
-                            await signIn('github', {
-                                redirectTo: '/profile',
-                                redirect: true,
-                            })
-                        }}
-                        className="w-full"
-                    >
-                        <Button className="w-full">Sign in with Google</Button>
-                    </form>
-                </CardFooter>
+                <CardContent>
+                    <OAuthButtons />
+                </CardContent>
             </Card>
-        </div>
+        </section>
     )
 }

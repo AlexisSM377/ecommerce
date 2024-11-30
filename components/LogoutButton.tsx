@@ -1,49 +1,72 @@
-/* eslint-disable @next/next/no-img-element */
-import { signOut, useSession } from 'next-auth/react'
+'use client'
 import { Button } from './ui/button'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './ui/dropdown-menu'
+import { createClientComponentClient, type Session } from '@supabase/auth-helpers-nextjs'
+import { Github } from 'lucide-react'
 import { useRouter } from 'next/navigation'
-import { User } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
-const LogoutButton = () => {
+export function LogoutButton() {
+    const supabase = createClientComponentClient()
+    const [session, setSession] = useState<Session | null>(null)
     const router = useRouter()
-    const { data: session } = useSession()
-    console.log(session?.user)
+
+    const handleSignIn = async () => {
+        await supabase.auth.signInWithOAuth({
+            provider: 'github',
+            options: {
+                redirectTo: 'http://localhost:3000/auth/callback',
+            }
+
+        })
+    }
+
+    const handleSignOut = async () => {
+        await supabase.auth.signOut()
+        router.refresh()
+    }
+
+    useEffect(() => {
+        const getSession = async () => {
+            const { data } = await supabase.auth.getSession()
+            setSession(data.session)
+        }
+
+        getSession()
+    }, [])
+
+
+
+
 
     return (
         <div>
-            {session?.user ? (
-                <div className='flex justify-center items-center gap-2'>
-                    <DropdownMenu >
-                        <DropdownMenuTrigger asChild className='cursor-pointer'>
-                            <Button variant="outline" size="icon">
-                                <img src={session.user.image ?? '/default-profile.png'} alt="profile picture" className="w-8 h-8 rounded-full" />
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem onClick={() => router.push("/profile")}>
-                                Perfil
-                            </DropdownMenuItem>
-                            <DropdownMenuItem onClick={() => signOut({
-                                callbackUrl: "/"
-                            })}>
-                                Cerrar sesión
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-
-
-                </div>
-            ) : (
-
-                <User
-                    strokeWidth="1"
-                    className="cursor-pointer"
-                    onClick={() => router.push("/login")}
-                />
-            )}
+            {
+                session === null ? (
+                    <Button onClick={handleSignIn}>
+                        <Github size={24} />
+                        Iniciar sesión
+                    </Button>
+                ) : (
+                    <Button onClick={handleSignOut}>
+                        Cerrar sesión
+                    </Button>
+                )
+            }
+            {/* <DropdownMenu>
+                <DropdownMenuTrigger>
+                    <Button>
+                        <User size={24} />
+                    </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                    <DropdownMenuItem>
+                        <Button onClick={handleSignIn}>Sign In</Button>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                        <Button onClick={handleSignOut}>Sign Out</Button>
+                    </DropdownMenuItem>
+                </DropdownMenuContent>
+            </DropdownMenu> */}
         </div>
     )
 }
-
-export default LogoutButton

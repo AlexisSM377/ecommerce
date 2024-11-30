@@ -7,8 +7,11 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster"
 import NextTopLoader from 'nextjs-toploader';
 
-import Navbar from "@/components/navbar";
+
 import { Providers } from "./Providers";
+import Navbar from "@/components/navbar";
+
+
 
 // If loading a variable font, you don't need to specify the font weight
 const poppins = Poppins({
@@ -52,8 +55,8 @@ export default function RootLayout({
             zIndex={1600}
             showAtBottom={false}
           />
+          <Navbar />
           <Providers>
-            <Navbar />
             {children}
           </Providers>
           <Toaster />
