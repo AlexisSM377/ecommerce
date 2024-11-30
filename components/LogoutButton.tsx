@@ -8,6 +8,7 @@ import { User } from 'lucide-react'
 const LogoutButton = () => {
     const router = useRouter()
     const { data: session } = useSession()
+    console.log(session?.user)
 
     return (
         <div>

@@ -8,13 +8,13 @@ export default function LoginPage() {
             <Card className="w-full max-w-sm">
                 <CardHeader>
                     <CardTitle className="text-2xl font-bold">Login</CardTitle>
-                    <CardDescription>Login this demo uses Google</CardDescription>
+                    <CardDescription>Login this demo uses github</CardDescription>
                 </CardHeader>
                 <CardFooter>
                     <form
                         action={async () => {
                             'use server'
-                            await signIn('google', {
+                            await signIn('github', {
                                 redirectTo: '/profile',
                             })
                         }}
