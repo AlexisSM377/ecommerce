@@ -39,12 +39,12 @@ const MenuList = () => {
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/shop" title="Tienda">
+                            <ListItem href="/sneakers" title="Tienda">
                                 Ver todos los productos
                             </ListItem>
-                            <ListItem href="/addres" title="Ubicacion">
+                            {/* <ListItem href="/addres" title="Ubicacion">
                                 Encuentra nuestra ubicacion
-                            </ListItem>
+                            </ListItem> */}
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
