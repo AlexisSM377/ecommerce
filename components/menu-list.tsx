@@ -107,6 +107,10 @@ const sneakers: { title: string; href: string }[] = [
     {
         title: "Nike",
         href: "/brand/nike",
+    },
+    {
+        title: "Converse",
+        href: "/brand/converse",
     }
 ]
 
@@ -123,7 +127,7 @@ const components: { title: string; href: string, description: string }[] = [
     },
     {
         title: "Running",
-        href: "/category/runnig",
+        href: "/category/running",
         description: "Zapatos para correr"
     },
     {

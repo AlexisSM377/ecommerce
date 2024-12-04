@@ -162,6 +162,11 @@
 html {
   scrollbar-gutter: stable;
 }
+/* div {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+} */
 
 @supports selector(::-webkit-scrollbar) {
   @media (hover: hover) {

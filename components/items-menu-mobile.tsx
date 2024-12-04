@@ -65,13 +65,13 @@ const ItemsMenuMobile = () => {
                             <Link href="/category/casual" className="block">Casual</Link>
                         </SheetClose>
                         <SheetClose asChild>
-                            <Link href="/category/Entrenamiento y gym" className="block">Entrenamiento y gym</Link>
+                            <Link href="/category/entrenamiento" className="block">Entrenamiento y gym</Link>
                         </SheetClose>
                         <SheetClose asChild>
-                            <Link href="/category/running" className="block">Formal</Link>
+                            <Link href="/category/running" className="block">Runnig</Link>
                         </SheetClose>
                         <SheetClose asChild>
-                            <Link href="/category/basquetbol" className="block">Basquetbol</Link>
+                            <Link href="/category/basquetbol" className="block">Básquetbol</Link>
                         </SheetClose>
                     </div>
                 </SheetContent>
@@ -94,9 +94,5 @@ const sneakers: { title: string; href: string }[] = [
     {
         title: "Nike",
         href: "/brand/nike",
-    },
-    {
-        title: "Reebok",
-        href: "/brand/reebok",
     }
 ]

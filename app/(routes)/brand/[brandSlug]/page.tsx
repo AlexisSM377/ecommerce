@@ -68,7 +68,7 @@ export default function Page() {
                     )}
                 </div>
                 {filteredProducts !== null && !loading && filteredProducts.length === 0 && (
-                    <p className="text-lg font-medium mt-4">No hay sneakers con ese filtro</p>
+                    <p className="text-lg font-medium mt-4 text-center text-blue-500">No hay sneakers con ese filtro</p>
 
                 )}
             </div>

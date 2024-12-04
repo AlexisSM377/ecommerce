@@ -38,7 +38,7 @@ export default function Page() {
             <div className="grid sm:grid-cols-2 sm:gap-5">
                 <div>
                     {items.length === 0 && (
-                        <p>No hay productos en el carrito</p>
+                        <p className="text-center text-blue-500">No hay productos en el carrito</p>
                     )}
                     <ul>
                         {items.map((item) => (

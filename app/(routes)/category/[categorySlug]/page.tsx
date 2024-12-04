@@ -55,7 +55,7 @@ export default function Page() {
                         ))
                     )}
                     {filteredProducts !== null && !loading && filteredProducts.length === 0 && (
-                        <p>No hay productos con este filtro</p>
+                        <p className="text-blue-500 text-center">No hay productos con este filtro</p>
                     )}
                 </div>
             </div>
