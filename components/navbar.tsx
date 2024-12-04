@@ -6,7 +6,7 @@ import ItemsMenuMobile from "./items-menu-mobile";
 import ToggleTheme from "./toggle-theme";
 import { useCart } from "@/hooks/use-card";
 import { useLovedProducts } from "@/hooks/use-loved-products";
-import LogoutButton from "./LogoutButton";
+// import LogoutButton from "./LogoutButton";
 
 const Navbar = () => {
 
@@ -49,7 +49,7 @@ const Navbar = () => {
 
 
 
-                <LogoutButton />
+                {/* <LogoutButton /> */}
 
                 <ToggleTheme />
             </div>
