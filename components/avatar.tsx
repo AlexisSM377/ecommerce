@@ -25,7 +25,7 @@ const data = [
     {
         name: "Aldo Vara Lopez",
         title: "Design Engineer",
-        instagram: "aldo.vara_340",
+        instagram: "aldo_.vara",
         url: "https://unavatar.io/ALDOVARA",
         country: 'MX'
     },
