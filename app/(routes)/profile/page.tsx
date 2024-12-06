@@ -9,7 +9,7 @@ const Page = () => {
             {session?.user ? (
                 <div className="flex flex-col justify-center items-center space-y-4">
                     <img src={session.user.image ?? '/default-profile.png'} alt="profile picture" className="w-20 h-20 rounded-full" />
-                    <p className="text-3xl">Hola <span className="text-blue-500 font-bold">{session.user.name}</span></p>
+                    <p className="text-3xl text-center">Hola <span className="text-blue-500 font-bold">{session.user.name}</span></p>
 
                 </div>
             ) : (
